@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    text-align: center;
+}
+
+header {
+    background: #2f2f2f;
+    color: whitesmoke;
+}
+
+header ul {
+    list-style: none;
+    /*border: 1px solid red;*/
+    margin: 0;
+    padding-left: 50px;
+}
+header li {
+    display: inline-block;
+    /*border: 1px solid magenta;*/
+    margin: 10px;
+    /*margin-top: 50px;*/
+}
+
+
+footer {
+    background: #2f2f2f;
+    color: whitesmoke;
+}
+footer > div {
+    height: 100px;
+}
+
+
+main {
+    /*background: lime;*/
+    flex: 1;
+}
+
+article {
+    border: 1px solid black;
+    margin: 10px 20px;
+    padding: 10px;
+}
