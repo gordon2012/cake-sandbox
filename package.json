@@ -1,0 +1,26 @@
+{
+  "name": "cake-sandbox",
+  "version": "1.0.0",
+  "description": "Cake Sandbox",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "browser-sync start --no-notify -p \"localhost/cake-sandbox\" -f \"src\" \"webroot\" \"config\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gordon2012/cake-sandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gordon2012/cake-sandbox/issues"
+  },
+  "homepage": "https://github.com/gordon2012/cake-sandbox#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}
