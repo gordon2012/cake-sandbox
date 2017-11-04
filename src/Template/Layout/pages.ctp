@@ -9,18 +9,28 @@
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('pages.css') ?>
     <?= $this->fetch('css') ?>
+
+    <?= $this->Html->script('vue.js') ?>
 </head>
 <body>
     <header>
-        <ul><?php
-            foreach(['index' => 'Home', 'test' => 'Test', 'example' => 'Example'] as $link => $text) {
-                echo '<li>';
-                echo $link === $page
-                    ? '<span>'. $text .'</span>'
-                    : $this->Html->link($text, ['controller' => 'pages', 'action' => $link]);
-                echo '</li>';
-            }
-        ?></ul>
+        <ul>
+            <?php $nav = [
+                'index' => 'Home',
+                'test' => 'Test',
+                'example' => 'Example',
+                'vuejs' => 'Vue.js'
+            ]; ?>
+            <?php foreach($nav as $link => $text): ?>
+                <li>
+                    <?php if($link === $page): ?>
+                        <span><?= $text ?></span>
+                    <?php else: ?>
+                        <?= $this->Html->link($text, ['controller' => 'pages', 'action' => $link]) ?>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
     </header>
     <main>
         <?= $this->fetch('content') ?>
@@ -28,7 +38,7 @@
     <footer><div>
         <?= isset($footer_text) ? $footer_text : null // Probably better as block ?>
     </div></footer>
-    
+
     <?= $this->fetch('script') ?>
 </body>
 </html>
