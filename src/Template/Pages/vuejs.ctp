@@ -1,3 +1,9 @@
+<?php
+    $this->append('script_head');
+        echo $this->Html->script('vue.js');
+    $this->end();
+?>
+
 <style>
     body {
         background: whitesmoke;

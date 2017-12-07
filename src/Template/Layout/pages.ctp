@@ -9,8 +9,13 @@
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('pages.css') ?>
     <?= $this->fetch('css') ?>
+    <?= $this->fetch('script_head') ?>
 
-    <?= $this->Html->script('vue.js') ?>
+    <?php
+        // Does not work
+        // Method WyriHaximus\Ratchet\View\Helper\WampHelper::init does not exist
+        $this->Wamp->init();
+    ?>
 </head>
 <body>
     <header>
